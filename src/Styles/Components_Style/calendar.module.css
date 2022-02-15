@@ -1,0 +1,172 @@
+.main_container {
+    width: 100vw;
+    height: 100%;
+    padding: 20px 30px 0px 30px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+}
+
+.calendar_wrapper {
+    width: 80%;
+    height: 85vh;
+    background-color: rgb(255, 255, 255);
+    border-radius: 20px;
+    padding: 15px;
+    -webkit-box-shadow: 5px 5px 15px 2px rgba(0, 0, 0, 0.2);
+    box-shadow: 5px 5px 15px 2px rgba(0, 0, 0, 0.2);
+}
+
+.add_btn {
+    padding: 4px 15px;
+    font-size: 1.3rem;
+    color: var(--white);
+    background-color: var(--blue);
+    cursor: pointer;
+    margin-left: 50%;
+    transform: translateX(-50%);
+}
+
+.options_container {
+    width: 380px;
+    height: auto;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.checkBox_wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.events_title {
+    font-size: 1.6rem;
+    font-weight: 600;
+    margin-top: 10px;
+}
+
+.event_list_container_desktop {
+    width: 100%;
+    height: auto;
+}
+
+.mobile_options_container {
+    display: none;
+}
+
+.filter_btn {
+    display: none;
+}
+
+@media screen and (max-width:1200px) {
+    .calendar_wrapper {
+        width: 75%;
+    }
+    .options_container {
+        width: 4200px;
+    }
+}
+
+@media screen and (max-width:1000px) {
+    .main_container {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 10px;
+    }
+    .calendar_wrapper {
+        width: 95vw;
+        height: 80vh;
+        background-color: rgb(255, 255, 255);
+        border-radius: 20px;
+        padding: 15px;
+        -webkit-box-shadow: 5px 5px 15px 2px rgba(0, 0, 0, 0.2);
+        box-shadow: 5px 5px 15px 2px rgba(0, 0, 0, 0.2);
+    }
+    .options_container {
+        width: 90%;
+        height: auto;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        display: none;
+    }
+    .mobile_options_container {
+        width: 100%;
+        height: auto;
+        z-index: 50;
+    }
+    .filter_btn {
+        padding: 0px 15px;
+        background-color: var(--orange);
+        color: #fff;
+        border: none;
+        font-size: 1.4rem;
+        -webkit-box-shadow: 5px 5px 15px 2px rgba(0, 0, 0, 0.2);
+        box-shadow: 5px 5px 15px 2px rgba(0, 0, 0, 0.2);
+        display: block;
+    }
+    .blackout {
+        width: 100vw;
+        height: 100vh;
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        top: 0;
+        z-index: 30;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        background-color: rgba(0, 0, 0, 0.7);
+    }
+    .mobile_wrapper {
+        width: 90vw;
+        max-width: 90vh;
+        max-height: 90vh;
+        overflow-y: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        background-color: #fff;
+    }
+    .mobile_options_header {
+        width: 100%;
+        height: auto;
+        padding: 5px 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: var(--blue);
+    }
+    .mobile_options_header p {
+        font-size: 1.4rem;
+        color: #fff;
+    }
+    .mobile_options_header .icon {
+        color: #fff;
+        font-size: 1.5rem;
+    }
+    .checkBox_wrapper {
+        width: 90%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 10px 0;
+        background-color: transparent;
+    }
+    .show {
+        display: block;
+    }
+}
